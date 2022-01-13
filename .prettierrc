@@ -1,0 +1,6 @@
+{
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "importOrder": ["^common", "^atoms", "^molecules", "^pages", "^[./]"],
+  "importOrderSortSpecifiers": true
+}

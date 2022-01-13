@@ -1,9 +1,13 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from 'next/document';
+
+const GOOGLE_FONTS = ['Amatic+SC:wght@400;700']
+  .map((font) => `family=${font}`)
+  .join('&');
 
 class MyDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html className="h-full">
         <Head>
           {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
@@ -12,11 +16,11 @@ class MyDocument extends Document {
             crossOrigin="true"
           /> */}
           <link
-            href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+            href={`https://fonts.googleapis.com/css2?${GOOGLE_FONTS}&display=swap`}
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body className="h-full font-display bg-gray-50">
           <Main />
           <NextScript />
         </body>
